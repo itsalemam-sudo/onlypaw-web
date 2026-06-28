@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up — OnlyPaw</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="paw">🐾</span> <span>OnlyPaw</span></a>
+    <nav class="nav">
+      <a href="/#services">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/pages/support.html">Support</a>
+    </nav>
+  </header>
+
+  <main class="legal">
+    <h1>Create your customer account</h1>
+    <p class="updated">Find trusted boarders, walkers, sitters, taxi drivers, groomers, and trainers near you.</p>
+
+    <form id="signupForm" style="display:flex;flex-direction:column;gap:14px;margin-top:24px">
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">First name *</span>
+        <input required name="firstName" type="text" style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">Last name *</span>
+        <input required name="lastName" type="text" style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">Email *</span>
+        <input required name="email" type="email" autocomplete="email" style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">Phone *</span>
+        <input required name="phone" type="tel" placeholder="+971 5..." style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">Password *</span>
+        <input required name="password" type="password" autocomplete="new-password" minlength="8" style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--ink-soft);margin-top:6px">
+        <input required type="checkbox" name="agree" style="margin-top:3px"/>
+        <span>I agree to the <a href="/pages/terms.html">Terms of Service</a> and <a href="/pages/privacy.html">Privacy Policy</a>.</span>
+      </label>
+      <button id="submitBtn" type="submit" style="background:var(--ink);color:white;border:none;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;cursor:pointer;margin-top:8px">Create account</button>
+      <div id="result" style="margin-top:6px"></div>
+    </form>
+
+    <p style="text-align:center;margin-top:32px;color:var(--muted);font-size:14px">
+      Already have an account? Download the app and sign in.
+    </p>
+  </main>
+
+  <script>
+    const API_BASE = 'https://api.onlypaw.net';
+    const form = document.getElementById('signupForm');
+    const btn = document.getElementById('submitBtn');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      btn.disabled = true;
+      btn.textContent = 'Creating account…';
+      result.innerHTML = '';
+      const payload = {
+        firstName: fd.get('firstName'),
+        lastName: fd.get('lastName'),
+        email: String(fd.get('email')).toLowerCase().trim(),
+        phone: fd.get('phone'),
+        password: fd.get('password'),
+        role: 'CUSTOMER',
+      };
+      try {
+        const res = await fetch(`${API_BASE}/api/auth/register`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          result.innerHTML = `<p style="color:#ef4444;font-size:13px">${data?.error || 'Could not create account.'}</p>`;
+          btn.disabled = false; btn.textContent = 'Create account';
+          return;
+        }
+        result.innerHTML = `
+          <div style="background:#f0fdf4;border:1px solid #86efac;color:#166534;padding:14px;border-radius:10px;margin-top:8px">
+            <strong>Account created!</strong> Check your email to verify, then download the app to start booking.
+            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+              <a class="cta-primary" style="padding:10px 18px;font-size:14px" href="https://apps.apple.com/">Download for iPhone</a>
+              <a class="cta-secondary" style="padding:10px 18px;font-size:14px" href="https://play.google.com/store">Get it on Google Play</a>
+            </div>
+          </div>`;
+        form.reset();
+      } catch (err) {
+        result.innerHTML = `<p style="color:#ef4444;font-size:13px">Network error. Please try again.</p>`;
+        btn.disabled = false; btn.textContent = 'Create account';
+      }
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><a class="brand" href="/"><span class="paw">🐾</span> OnlyPaw</a><p class="small">Pet care, reimagined for the UAE.</p></div>
+      <div><h4>Legal</h4><a href="/pages/terms.html">Terms</a><a href="/pages/privacy.html">Privacy</a><a href="/pages/cookies.html">Cookies</a></div>
+      <div><h4>Company</h4><a href="/blog/">Blog</a><a href="/pages/support.html">Support</a></div>
+      <div><h4>For team</h4><a href="https://admin.onlypaw.net">Admin login</a></div>
+    </div>
+    <p class="copyright">© 2026 OnlyPaw. All rights reserved.</p>
+  </footer>
+</body>
+</html>

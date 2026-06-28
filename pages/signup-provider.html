@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Provider — OnlyPaw</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="paw">🐾</span> <span>OnlyPaw</span></a>
+    <nav class="nav">
+      <a href="/#services">Services</a>
+      <a href="/blog/">Blog</a>
+      <a href="/pages/support.html">Support</a>
+    </nav>
+  </header>
+
+  <main class="legal">
+    <h1>Become a provider</h1>
+    <p class="updated">Apply in 2 minutes. Complete document verification in the app.</p>
+
+    <p>Fill in your basics here. We'll create your account and email you a link to download the app, where you finish verification by uploading your ID, a selfie, and (for boarding) home photos.</p>
+
+    <form id="signupForm" style="display:flex;flex-direction:column;gap:14px;margin-top:24px">
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">First name *</span>
+        <input required name="firstName" type="text" style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">Last name *</span>
+        <input required name="lastName" type="text" style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">Email *</span>
+        <input required name="email" type="email" autocomplete="email" style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">Phone *</span>
+        <input required name="phone" type="tel" placeholder="+971 5..." style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">Password *</span>
+        <input required name="password" type="password" autocomplete="new-password" minlength="8" style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px" />
+        <span style="font-size:12px;color:var(--muted)">At least 8 characters.</span>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">City *</span>
+        <select required name="city" style="padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:15px;background:white">
+          <option value="">Select your city…</option>
+          <option>Dubai</option>
+          <option>Abu Dhabi</option>
+          <option>Sharjah</option>
+          <option>Ajman</option>
+          <option>Ras Al Khaimah</option>
+          <option>Fujairah</option>
+          <option>Umm Al Quwain</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:14px">Services you want to offer *</span>
+        <span style="font-size:13px;color:var(--muted)">Pick at least one — you can add more in the app.</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px">
+          <label style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;cursor:pointer;background:white"><input type="checkbox" name="services" value="BOARDING"/> 🏠 Boarding</label>
+          <label style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;cursor:pointer;background:white"><input type="checkbox" name="services" value="DOG_WALKING"/> 🦮 Walking</label>
+          <label style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;cursor:pointer;background:white"><input type="checkbox" name="services" value="PET_TAXI"/> 🚗 Pet Taxi</label>
+          <label style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;cursor:pointer;background:white"><input type="checkbox" name="services" value="GROOMING"/> ✂️ Grooming</label>
+          <label style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;cursor:pointer;background:white"><input type="checkbox" name="services" value="TRAINING"/> 🎓 Training</label>
+          <label style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;cursor:pointer;background:white"><input type="checkbox" name="services" value="PET_SITTING"/> 🐾 Pet Sitting</label>
+        </div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--ink-soft);margin-top:6px">
+        <input required type="checkbox" name="agree" style="margin-top:3px"/>
+        <span>I agree to the <a href="/pages/terms.html">Terms of Service</a> and <a href="/pages/privacy.html">Privacy Policy</a>, and I understand that approval requires identity + (for boarding) home verification in the app.</span>
+      </label>
+      <button id="submitBtn" type="submit" style="background:var(--ink);color:white;border:none;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;cursor:pointer;margin-top:8px">Create my provider account</button>
+      <div id="result" style="margin-top:6px"></div>
+    </form>
+
+    <h2 style="margin-top:48px">What happens next</h2>
+    <ol>
+      <li>You'll get a verification email immediately. Confirm it to activate your account.</li>
+      <li>Download the OnlyPaw app and sign in with the email and password you just set.</li>
+      <li>In the app, upload your government ID, a selfie, and (for boarding) 3-5 photos of your home.</li>
+      <li>Complete the short knowledge test for each service you're offering.</li>
+      <li>Our team reviews your application within 1-2 business days. You'll get a push notification when you're approved.</li>
+    </ol>
+  </main>
+
+  <script>
+    const API_BASE = 'https://api.onlypaw.net';
+    const form = document.getElementById('signupForm');
+    const btn = document.getElementById('submitBtn');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const services = fd.getAll('services');
+      if (services.length === 0) {
+        result.innerHTML = '<p style="color:#ef4444;font-size:13px">Pick at least one service.</p>';
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = 'Creating account…';
+      result.innerHTML = '';
+      const payload = {
+        firstName: fd.get('firstName'),
+        lastName: fd.get('lastName'),
+        email: String(fd.get('email')).toLowerCase().trim(),
+        phone: fd.get('phone'),
+        password: fd.get('password'),
+        role: 'PROVIDER',
+        city: fd.get('city'),
+        services,
+      };
+      try {
+        const res = await fetch(`${API_BASE}/api/auth/register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          result.innerHTML = `<p style="color:#ef4444;font-size:13px">${data?.error || 'Could not create account. Try a different email.'}</p>`;
+          btn.disabled = false;
+          btn.textContent = 'Create my provider account';
+          return;
+        }
+        result.innerHTML = `
+          <div style="background:#f0fdf4;border:1px solid #86efac;color:#166534;padding:14px;border-radius:10px;margin-top:8px">
+            <strong>Account created!</strong> Check your email for a verification code, then download the app to complete document verification.
+            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+              <a class="cta-primary" style="padding:10px 18px;font-size:14px" href="https://apps.apple.com/">Download for iPhone</a>
+              <a class="cta-secondary" style="padding:10px 18px;font-size:14px" href="https://play.google.com/store">Get it on Google Play</a>
+            </div>
+          </div>`;
+        form.reset();
+      } catch (err) {
+        result.innerHTML = `<p style="color:#ef4444;font-size:13px">Network error. Please try again.</p>`;
+        btn.disabled = false;
+        btn.textContent = 'Create my provider account';
+      }
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><a class="brand" href="/"><span class="paw">🐾</span> OnlyPaw</a><p class="small">Pet care, reimagined for the UAE.</p></div>
+      <div><h4>Legal</h4><a href="/pages/terms.html">Terms</a><a href="/pages/privacy.html">Privacy</a><a href="/pages/cookies.html">Cookies</a></div>
+      <div><h4>Company</h4><a href="/blog/">Blog</a><a href="/pages/support.html">Support</a></div>
+      <div><h4>For team</h4><a href="https://admin.onlypaw.net">Admin login</a></div>
+    </div>
+    <p class="copyright">© 2026 OnlyPaw. All rights reserved.</p>
+  </footer>
+</body>
+</html>
