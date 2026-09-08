@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://onlypaw.net/</loc>
     <changefreq>weekly</changefreq>
@@ -50,21 +51,76 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Blog hub -->
   <url>
     <loc>https://onlypaw.net/blog/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog posts — English -->
+  <url>
+    <loc>https://onlypaw.net/blog/posts/preparing-pet-for-first-boarding-stay.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://onlypaw.net/blog/posts/preparing-pet-for-first-boarding-stay.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://onlypaw.net/blog/posts/preparing-pet-for-first-boarding-stay-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://onlypaw.net/blog/posts/preparing-pet-for-first-boarding-stay.html"/>
   </url>
   <url>
     <loc>https://onlypaw.net/blog/posts/dog-walking-in-uae-summer.html</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://onlypaw.net/blog/posts/dog-walking-in-uae-summer.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://onlypaw.net/blog/posts/dog-walking-in-uae-summer-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://onlypaw.net/blog/posts/dog-walking-in-uae-summer.html"/>
   </url>
   <url>
-    <loc>https://onlypaw.net/blog/posts/preparing-pet-for-first-boarding-stay.html</loc>
+    <loc>https://onlypaw.net/blog/posts/positive-reinforcement-basics.html</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.75</priority>
   </url>
+  <url>
+    <loc>https://onlypaw.net/blog/posts/cat-grooming-at-home.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://onlypaw.net/blog/posts/pet-vaccinations-uae.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://onlypaw.net/blog/posts/pet-taxi-safety.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Blog posts — Arabic -->
+  <url>
+    <loc>https://onlypaw.net/blog/posts/preparing-pet-for-first-boarding-stay-ar.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://onlypaw.net/blog/posts/preparing-pet-for-first-boarding-stay-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://onlypaw.net/blog/posts/preparing-pet-for-first-boarding-stay.html"/>
+  </url>
+  <url>
+    <loc>https://onlypaw.net/blog/posts/dog-walking-in-uae-summer-ar.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://onlypaw.net/blog/posts/dog-walking-in-uae-summer-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://onlypaw.net/blog/posts/dog-walking-in-uae-summer.html"/>
+  </url>
+
   <url>
     <loc>https://onlypaw.net/pages/terms.html</loc>
     <changefreq>yearly</changefreq>
