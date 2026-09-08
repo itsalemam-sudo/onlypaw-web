@@ -1,0 +1,33 @@
+{
+  "notes": "Typical range, 2026 indicative. USD. Ranges reflect common market rates observed in independent pet-care marketplaces; use as a guide, not a quote.",
+  "dog-walking": {
+    "high": { "min": 22, "max": 35, "per_30min_min": 18, "per_30min_max": 28, "per_60min_min": 28, "per_60min_max": 45, "weekly_min": 130, "weekly_max": 220, "unit": "per 30-min walk" },
+    "mid":  { "min": 15, "max": 25, "per_30min_min": 12, "per_30min_max": 20, "per_60min_min": 20, "per_60min_max": 32, "weekly_min": 85,  "weekly_max": 150, "unit": "per 30-min walk" },
+    "low":  { "min": 6,  "max": 14, "per_30min_min": 5,  "per_30min_max": 11, "per_60min_min": 9,  "per_60min_max": 18, "weekly_min": 30,  "weekly_max": 70,  "unit": "per 30-min walk" }
+  },
+  "pet-sitting": {
+    "high": { "min": 25, "max": 42, "short_visit_min": 20, "short_visit_max": 30, "long_visit_min": 32, "long_visit_max": 50, "weekly_min": 160, "weekly_max": 260, "unit": "per drop-in visit" },
+    "mid":  { "min": 18, "max": 30, "short_visit_min": 14, "short_visit_max": 22, "long_visit_min": 22, "long_visit_max": 38, "weekly_min": 100, "weekly_max": 180, "unit": "per drop-in visit" },
+    "low":  { "min": 7,  "max": 16, "short_visit_min": 6,  "short_visit_max": 12, "long_visit_min": 10, "long_visit_max": 22, "weekly_min": 40,  "weekly_max": 90,  "unit": "per drop-in visit" }
+  },
+  "pet-boarding": {
+    "high": { "min": 45, "max": 90, "per_night_min": 45, "per_night_max": 90, "weekly_min": 280, "weekly_max": 560, "holiday_min": 65, "holiday_max": 130, "unit": "per night" },
+    "mid":  { "min": 30, "max": 60, "per_night_min": 30, "per_night_max": 60, "weekly_min": 180, "weekly_max": 380, "holiday_min": 45, "holiday_max": 85,  "unit": "per night" },
+    "low":  { "min": 12, "max": 30, "per_night_min": 12, "per_night_max": 30, "weekly_min": 75,  "weekly_max": 190, "holiday_min": 18, "holiday_max": 45,  "unit": "per night" }
+  },
+  "dog-daycare": {
+    "high": { "min": 38, "max": 65, "half_day_min": 22, "half_day_max": 38, "full_day_min": 38, "full_day_max": 65, "weekly_min": 170, "weekly_max": 290, "unit": "per full day" },
+    "mid":  { "min": 25, "max": 45, "half_day_min": 15, "half_day_max": 26, "full_day_min": 25, "full_day_max": 45, "weekly_min": 110, "weekly_max": 200, "unit": "per full day" },
+    "low":  { "min": 10, "max": 22, "half_day_min": 6,  "half_day_max": 14, "full_day_min": 10, "full_day_max": 22, "weekly_min": 45,  "weekly_max": 100, "unit": "per full day" }
+  },
+  "cat-sitting": {
+    "high": { "min": 20, "max": 35, "short_visit_min": 18, "short_visit_max": 28, "long_visit_min": 28, "long_visit_max": 42, "weekly_min": 130, "weekly_max": 210, "unit": "per visit" },
+    "mid":  { "min": 14, "max": 25, "short_visit_min": 12, "short_visit_max": 20, "long_visit_min": 20, "long_visit_max": 32, "weekly_min": 80,  "weekly_max": 150, "unit": "per visit" },
+    "low":  { "min": 6,  "max": 14, "short_visit_min": 5,  "short_visit_max": 10, "long_visit_min": 9,  "long_visit_max": 18, "weekly_min": 32,  "weekly_max": 75,  "unit": "per visit" }
+  },
+  "pet-taxi": {
+    "high": { "min": 25, "max": 55, "short_ride_min": 20, "short_ride_max": 35, "long_ride_min": 45, "long_ride_max": 90, "per_km_min": 1.8, "per_km_max": 3.2, "unit": "per short ride" },
+    "mid":  { "min": 18, "max": 40, "short_ride_min": 14, "short_ride_max": 25, "long_ride_min": 32, "long_ride_max": 65, "per_km_min": 1.2, "per_km_max": 2.2, "unit": "per short ride" },
+    "low":  { "min": 8,  "max": 20, "short_ride_min": 6,  "short_ride_max": 12, "long_ride_min": 15, "long_ride_max": 35, "per_km_min": 0.5, "per_km_max": 1.1, "unit": "per short ride" }
+  }
+}

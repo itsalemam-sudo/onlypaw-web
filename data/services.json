@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "dog-walking",
+    "name": "Dog Walking",
+    "singular": "dog walk",
+    "verb": "walk",
+    "avg_duration": "30-60 minutes",
+    "provider_word": "dog walker",
+    "unit": "per walk",
+    "for_providers_slug": "dog-walker"
+  },
+  {
+    "slug": "pet-sitting",
+    "name": "Pet Sitting",
+    "singular": "pet-sitting visit",
+    "verb": "sit",
+    "avg_duration": "30-60 minutes per visit",
+    "provider_word": "pet sitter",
+    "unit": "per visit",
+    "for_providers_slug": "pet-sitter"
+  },
+  {
+    "slug": "pet-boarding",
+    "name": "Pet Boarding",
+    "singular": "boarding night",
+    "verb": "board",
+    "avg_duration": "overnight",
+    "provider_word": "pet boarder",
+    "unit": "per night",
+    "for_providers_slug": "pet-boarder"
+  },
+  {
+    "slug": "dog-daycare",
+    "name": "Dog Daycare",
+    "singular": "daycare day",
+    "verb": "look after",
+    "avg_duration": "full day",
+    "provider_word": "daycare host",
+    "unit": "per day",
+    "for_providers_slug": "dog-walker"
+  },
+  {
+    "slug": "cat-sitting",
+    "name": "Cat Sitting",
+    "singular": "cat-sitting visit",
+    "verb": "check in on",
+    "avg_duration": "20-45 minutes per visit",
+    "provider_word": "cat sitter",
+    "unit": "per visit",
+    "for_providers_slug": "pet-sitter"
+  },
+  {
+    "slug": "pet-taxi",
+    "name": "Pet Taxi",
+    "singular": "pet-taxi ride",
+    "verb": "drive",
+    "avg_duration": "one-way ride",
+    "provider_word": "pet-taxi driver",
+    "unit": "per ride",
+    "for_providers_slug": "dog-walker"
+  }
+]
